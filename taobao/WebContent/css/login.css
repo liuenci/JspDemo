@@ -1,0 +1,73 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+#outContent {
+	width: 1350px;
+	height: 800px;
+	background-color: #2CC6FF;
+}
+#logo{
+	width:1350px;
+	height:88px;
+	margin:0 auto;
+	background-color:#fff;
+}
+#logoimg{
+	width:1190px;
+	height:88px;
+	margin:0 auto;
+	background-color:white;
+	position:relative;
+}
+#logoimg img{
+	width:190px;
+	height:28px;
+	margin-top:25px;
+}
+#mainimg{
+	width:1190px;
+	height:600px;
+	margin:0 auto;
+	background-image:url(https://img.alicdn.com/tfs/TB1FKA8SXXXXXa5XVXXXXXXXXXX-1190-600.jpg);
+}
+.logindiv1{
+	width:350px;
+	height:400px;
+	background-color:#FFFCCC;
+	position:absolute;
+	margin-top:90px;
+	margin-left:760px;
+}
+.logindiv2{
+	width:350px;
+	height:400px;
+	background-color:#FFFCCC;
+	position:absolute;
+	margin-top:90px;
+	margin-left:760px;
+}
+#location{
+	width:50px;
+	height:50px;
+	margin-left:300px;
+}
+*{
+	margin:0px;
+	padding:0px;
+}
+#infor{
+	width:298px;
+	height:257px;
+	margin:10px auto;
+}
+
+#user{
+	width:300px;
+	height:42px;
+}
+#pwd{
+	width:300px;
+	height:42px;
+}

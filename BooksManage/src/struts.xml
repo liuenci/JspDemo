@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!DOCTYPE struts PUBLIC 
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="GBK"></constant>
+	<package name="library" extends="struts-default">
+	<!-- 跳转到后台登陆界面 -->
+	<action name="admin" class="booksManage.admin.BackgroundCheckLogin">
+		<result>/background/BackgroundLogin.jsp</result>
+	</action>
+	<!-- 验证后台登陆 -->
+	<action name="backchecklogin" class="booksManage.admin.BackgroundCheckLogin" method="CheckBackLogin">
+	<result name="success">/background/BackgroundIndex.jsp</result>
+	<result name="error">/background/BackLoginError.jsp</result>
+	</action>
+	<!-- 退出 -->
+	<action name="back" class="booksManage.admin.BackgroundCheckLogin" method="Back">
+		<result>/login.jsp</result>
+	</action>
+	<!-- 后退一步 -->
+	<action name="back1" class="booksManage.admin.BackgroundCheckLogin" method="Back1">
+		<result>/background/BackgroundIndex.jsp</result>
+	</action>
+	<!-- 跳转到增加学生信息界面 -->
+	<action name="addstu" class="booksManage.admin.BookManage">
+		<result name="success">/background/AddStu.jsp</result>
+	</action>
+	<!-- 执行增加学生信息 -->
+	<action name="addstuaction" class="booksManage.admin.BookManage" method="AddStuAction">
+		<result name="success">/background/AddStuSuccess.jsp</result>
+		<result name="input">/background/AddStu.jsp</result>
+	</action>
+	
+	<!-- 跳转到添加图书界面 -->
+	<action name="addbook" class="booksManage.admin.BookManage" method="AddBooks">
+		<result name="success">/background/AddBooks.jsp</result>
+	</action>
+	<!-- 执行增加图书 -->
+	<action name="addbooksaction" class="booksManage.admin.BookManage" method="AddBooksAction">
+		<result name="success">/background/AddBooksSuccess.jsp</result>
+		<result name="input">/background/AddBooks.jsp</result>
+	</action>
+	<!-- 查询图书 -->
+	<action name="backgroundselect" class="booksManage.admin.BookManage" method="BackSelect">
+		<result name="success">/background/BackSelect.jsp</result>
+	</action>
+	<!-- 跳转到修改图书信息界面 -->
+	<action name="updatebook" class="booksManage.admin.BookManage" method="UpdateBook">
+		<result name="success">/background/UpdateBook.jsp</result>
+	</action>
+	<!-- 执行修改图书信息 -->
+	<action name="updatebookaction" class="booksManage.admin.BookManage" method="UpdateBookAction">
+		<result name="success">/background/UpdateBookSuccess.jsp</result>
+		<result name="input">/background/UpdateBook.jsp</result>
+	</action>
+	<!-- 跳转到删除学生信息界面 -->
+	<action name="deletestu" class="booksManage.admin.BookManage" method="DeleteStu">
+		<result name="success">/background/DeleteStu.jsp</result>
+	</action>
+	<!-- 执行删除学生信息界面 -->
+	<action name="deletestuaction" class="booksManage.admin.BookManage" method="DeleteStuAction">
+		<result name="success">/background/DeleteStuSuccess.jsp</result>
+		<result name="input">/background/DeleteStu.jsp</result>
+	</action>
+	
+	<!-- 跳转到删除图书界面 -->
+	<action name="deletebook" class="booksManage.admin.BookManage" method="DeleteBook">
+		<result name="success">/background/DeleteBook.jsp</result>
+	</action>
+	<!-- 删除图书界面 -->
+	<action name="deletebookaction" class="booksManage.admin.BookManage" method="DeleteBookAction">
+		<result name="success">/background/DeleteBookSuccess.jsp</result>
+		<result name="input">/background/DeleteBook.jsp</result>
+	</action>
+	
+	
+	<!-- 前端登陆验证 -->
+	<action name="checklogin" class="booksManage.stu.PersonalManage">
+		<result name="success">/student/Welcome.jsp</result>
+		<result name="error">/student/LoginError.jsp</result>
+	</action>
+	<!-- 返回上一页 -->
+	<action name="studentback" class="booksManage.stu.PersonalManage" method="StudentBack">
+		<result name="success">/student/Welcome.jsp</result>
+	</action>
+	<!-- 跳转到借书界面 -->
+	<action name="borrowbook" class="booksManage.stu.PersonalManage" method="BorrowBook">
+		<result name="success">/student/BorrowBooksIndex.jsp</result>
+	</action>
+	<!-- 搜索图书结果 -->
+	<action name="searchbook" class="booksManage.stu.PersonalManage" method="SearchBook">
+		<result name="success">/student/SearchResult.jsp</result>
+		<result name="input">/student/BorrowBooksIndex.jsp</result>
+	</action>
+	<!-- 执行借书时间 -->
+	<action name="borrowbookaction" class="booksManage.stu.PersonalManage" method="BorrowBooksAction">
+		<result name="success">/student/BorrowBooksSuccess.jsp</result>
+		<result name="error">/student/BorrowBooksError.jsp</result>
+	</action>
+	<!-- 跳转到还书界面 -->
+	<action name="returnbook" class="booksManage.stu.PersonalManage" method="ReturnBook">
+		<result name="success">/student/ReturnBook.jsp</result>
+	</action>
+	<!-- 执行还书事件 -->
+	<action name="returnbookaction" class="booksManage.stu.PersonalManage" method="ReturnBookAction">
+		<result name="success">/student/ReturnBookSuccess.jsp</result>
+	</action>
+	<!-- 查看个人信息 -->
+	<action name="personalinfo" class="booksManage.stu.PersonalManage" method="PersonalInfo">
+		<result name="success">/student/PersonalInfo.jsp</result>
+	</action>
+	<!-- 查看借还书记录 -->
+	<action name="record" class="booksManage.stu.PersonalManage" method="LookRecord">
+		<result name="success">/student/Record.jsp</result>
+	</action>
+	<!-- 删除记录 -->
+	<action name="deleterecord" class="booksManage.stu.PersonalManage" method="DeleteRecord">
+		<result name="success">/student/Record.jsp</result>
+	</action>
+	</package>
+</struts>

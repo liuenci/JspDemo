@@ -1,0 +1,27 @@
+@charset "UTF-8";
+*{
+	margin:0px;
+	padding:0px;
+}
+.main{
+	width:1350px;
+	text-align:center;
+}
+.registerinfor{
+	width:300px;
+	margin:0 auto;
+}
+.name{
+	color:red;
+	font-size:26px;
+	font-weight:bold;
+	font-family:"隶书";
+}
+label{
+	color:green;
+	font-size:14px;
+}
+.re{
+	margin-right:80px;
+}
+

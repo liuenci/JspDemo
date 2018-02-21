@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+	version="2.0">
+	<tlib-version>2.0</tlib-version>
+	<short-name>simple</short-name>
+	<uri>http://www.liuenci.cn/tags</uri>
+	<tag>
+		<name>page</name>
+		<tag-class>cn.liuenci.tags.PagesTag</tag-class>
+		<body-content>empty</body-content>	
+		
+		<attribute>	
+			<description>当前页</description>
+			<!-- 属性名 -->
+			<name>currpage</name>
+			<!-- 是否必填 -->
+			<required>false</required>
+			<!-- 属性值是否支持EL -->
+			<rtexprvalue>true</rtexprvalue>
+			<type></type>
+		</attribute>
+		
+		<attribute>	
+			<description>页大小</description>
+			<!-- 属性名 -->
+			<name>pagesize</name>
+			<!-- 是否必填 -->
+			<required>false</required>
+			<!-- 属性值是否支持EL -->
+			<rtexprvalue>true</rtexprvalue>
+			<type></type>
+		</attribute>
+		
+		<attribute>	
+			<description>总记录数</description>
+			<!-- 属性名 -->
+			<name>total</name>
+			<!-- 是否必填 -->
+			<required>true</required>
+			<!-- 属性值是否支持EL -->
+			<rtexprvalue>true</rtexprvalue>
+			<type></type>
+		</attribute>
+		
+		<attribute>	
+			<description>总记页数</description>
+			<!-- 属性名 -->
+			<name>pages</name>
+			<!-- 是否必填 -->
+			<required>true</required>
+			<!-- 属性值是否支持EL -->
+			<rtexprvalue>true</rtexprvalue>
+			<type></type>
+		</attribute>
+		
+		<attribute>	
+			<description>访问路径</description>
+			<!-- 属性名 -->
+			<name>url</name>
+			<!-- 是否必填 -->
+			<required>true</required>
+			<!-- 属性值是否支持EL -->
+			<rtexprvalue>true</rtexprvalue>
+			<type></type>
+		</attribute>
+	</tag>
+</taglib>
